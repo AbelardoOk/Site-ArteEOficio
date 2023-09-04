@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto_Flex as Roboto, Lobster } from "next/font/google";
@@ -21,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${lobster.variable} font-sans`}>
+      <body
+        className={`${roboto.variable} ${lobster.variable} font-sans text-slate-900`}
+      >
+        <Header />
         {children}
       </body>
     </html>
